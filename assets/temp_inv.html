@@ -1,0 +1,219 @@
+<?php
+function DateThai($strDate)
+{
+    $strYear = date("Y", strtotime($strDate)) + 543;
+    $strMonth = date("n", strtotime($strDate));
+    $strDay = date("j", strtotime($strDate));
+    $strMonthCut = array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+    $strMonthThai = $strMonthCut[$strMonth];
+    return "$strDay $strMonthThai "."พ.ศ. "."$strYear";
+}
+?>
+<link
+  href="https://fonts.googleapis.com/css?family=Sarabun&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    font-family: "Sarabun";
+    font-size: 12pt;
+  }
+
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  /* .page {
+    width: 297mm;
+    height: 210mm;
+    padding: 5mm;
+    margin: 10mm auto;
+    border: 1px #d3d3d3 solid;
+    border-radius: 0;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  } */
+  /* .subpage {
+    padding: 0.5cm;
+    border: 5px red solid;
+    height: 257mm;
+    outline: 2cm #ffeaea solid;
+  }
+  .block {
+    padding: 0.3cm;
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 1px #ccc solid;
+  } */
+</style>
+<div class="page" style="line-height: 0.5;width: 297mm;height: 210mm;padding: 5mm;margin: 10mm auto;background-color: #fff;">
+  <div class="block" style="padding: 0.3cm;float: left;width: 50%;height: 100%;border: 1px #ccc solid;">
+    <small style="font-size: 6pt;float:right;">(สำหรับนักศึกษา)</small>
+    <p style="text-align: center;">ใบเสร็จรับเงิน</p>
+    <p style="font-size: 9pt;text-align: center;">
+      วันที่
+      <?= DateThai('2020-02-21'); ?>
+    </p>
+    <p style="font-size: 9pt;text-align: center;">
+      คณะอุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยราชมงคลรัตนโกสินทร์
+    </p>
+    <p style="font-size: 9pt;text-align: center;">
+      ถ.เพชรเกษม ต.หนองแก อ.หัวหิน จ.ประจวบคีรีขันธ์ 77110
+    </p>
+    <p style="font-size: 9pt;text-align: center;">โทร 032-618500 ต่อ 4711</p>
+
+    <div style="width: 100%;">
+      <p style="font-size: 9pt;width: 60%; float: left;">
+        <strong>ชื่อ-นามสกุล (นักศึกษา)</strong> นางสาวปรีดารัตน์ จุทอง
+      </p>
+      <p style="font-size: 9pt;width: 40%; float: left;text-align: right;">
+        <strong>รหัสประจำตัว</strong> 2571031441150
+      </p>
+
+      <p style="font-size: 9pt;width: 60%; float: left;margin: 0;">
+        <strong>สาขา</strong> เทคโนโลยีสารสนเทศ
+      </p>
+      <p
+        style="font-size: 9pt;width: 40%; float: left;text-align: right;margin: 0;"
+      >
+        <strong>หลักสูตร</strong> 4ปี(ปกติ)
+      </p>
+
+      <p style="font-size: 9pt;width: 60%; float: left;">
+        <strong>สถานะ</strong> .......... ปกติ
+      </p>
+      <p style="font-size: 9pt;width: 100%; float: left;">
+        <strong style="color: #fff;">สถานะ</strong> .......... ผ่อนผัน
+        ..........................................................................
+        ชำระภายใน ........../.........../...............
+      </p>
+      <p style="font-size: 9pt;width: 100%; float: left;">
+        <strong style="color: #fff;">สถานะ</strong> ชำระเงินโดย
+        <input type="checkbox" name="" id="" /> เงินสด
+        <input type="checkbox" name="" id="" />
+        โอนเงินเข้าบัญชี
+        ....................................................................................
+      </p>
+    </div>
+
+    <table style="width:100%;font-size: 8pt;text-align: left; border-top: solid 1px #ccc;border-collapse: collapse;">
+        <thead>
+          <tr style="padding: 5px;">
+            <th style="width: 10%;border: 1px solid #ccc;padding: 5px;">ลำดับ</th>
+            <th style="width: 50%;border: 1px solid #ccc;padding: 5px;">รายการ</th>
+            <th style="width: 10%;border: 1px solid #ccc;padding: 5px;">ขนาด</th>
+            <th style="width: 10%;border: 1px solid #ccc;padding: 5px;text-align: right;">จำนวน</th>
+            <th style="width: 20%;border: 1px solid #ccc;padding: 5px;text-align: right;">ราคา</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?for($i=1;$i<=15;$i++){ ?>
+            <tr>
+              <td style="border: 1px solid #ccc;padding: 5px;">ลำดับ</td>
+              <td style="border: 1px solid #ccc;padding: 5px;">รายการ</td>
+              <td style="border: 1px solid #ccc;padding: 5px;">ขนาด</td>
+              <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">จำนวน</td>
+              <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">ราคา</td> 
+            </tr>
+            <? } ?>
+            <tr>
+              <td style="border: 1px solid #ccc;padding: 5px;"></td>
+              <td style="border: 1px solid #ccc;padding: 5px;"></td>
+              <td style="border: 1px solid #ccc;padding: 5px;"></td>
+              <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">ราคารวม</td>
+              <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">6,550</td> 
+            </tr>
+        </tbody>
+      </table>
+
+
+  </div>
+  <div class="block" style="padding: 0.3cm;float: left;width: 50%;height: 100%;border: 1px #ccc solid;">
+    <small style="font-size: 6pt;float:right;">(สำหรับคณะ)</small>
+    <p style="text-align: center;">ใบเสร็จรับเงิน</p>
+    <p style="font-size: 9pt;text-align: center;">
+      วันที่
+      <?= DateThai('2020-02-21'); ?>
+    </p>
+    <p style="font-size: 9pt;text-align: center;">
+      คณะอุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยราชมงคลรัตนโกสินทร์
+    </p>
+    <p style="font-size: 9pt;text-align: center;">
+      ถ.เพชรเกษม ต.หนองแก อ.หัวหิน จ.ประจวบคีรีขันธ์ 77110
+    </p>
+    <p style="font-size: 9pt;text-align: center;">โทร 032-618500 ต่อ 4711</p>
+
+    <div style="width: 100%;position: relative;margin-bottom: 10px;">
+      <p style="font-size: 9pt;width: 60%; float: left;">
+        <strong>ชื่อ-นามสกุล (นักศึกษา)</strong> นางสาวปรีดารัตน์ จุทอง
+      </p>
+      <p style="font-size: 9pt;width: 40%; float: left;text-align: right;">
+        <strong>รหัสประจำตัว</strong> 2571031441150
+      </p>
+
+      <p style="font-size: 9pt;width: 60%; float: left;margin: 0;">
+        <strong>สาขา</strong> เทคโนโลยีสารสนเทศ
+      </p>
+      <p
+        style="font-size: 9pt;width: 40%; float: left;text-align: right;margin: 0;"
+      >
+        <strong>หลักสูตร</strong> 4ปี(ปกติ)
+      </p>
+
+      <p style="font-size: 9pt;width: 60%; float: left;">
+        <strong>สถานะ</strong> .......... ปกติ
+      </p>
+      <p style="font-size: 9pt;width: 100%; float: left;">
+        <strong style="color: #fff;">สถานะ</strong> .......... ผ่อนผัน
+        ..........................................................................
+        ชำระภายใน ........../.........../...............
+      </p>
+      <p style="font-size: 9pt;width: 100%; float: left;">
+        <strong style="color: #fff;">สถานะ</strong> ชำระเงินโดย
+        <input type="checkbox" name="" id="" /> เงินสด
+        <input type="checkbox" name="" id="" />
+        โอนเงินเข้าบัญชี
+        .....................................................................................
+      </p>
+    </div>
+
+    <table style="width:100%;font-size: 8pt;text-align: left; border-top: solid 1px #ccc;border-collapse: collapse;">
+      <thead>
+        <tr style="padding: 5px;">
+          <th style="width: 10%;border: 1px solid #ccc;padding: 5px;">ลำดับ</th>
+          <th style="width: 50%;border: 1px solid #ccc;padding: 5px;">รายการ</th>
+          <th style="width: 10%;border: 1px solid #ccc;padding: 5px;">ขนาด</th>
+          <th style="width: 10%;border: 1px solid #ccc;padding: 5px;text-align: right;">จำนวน</th>
+          <th style="width: 20%;border: 1px solid #ccc;padding: 5px;text-align: right;">ราคา</th>
+        </tr>
+      </thead>
+      <tbody>
+          <?for($i=1;$i<=15;$i++){ ?>
+          <tr>
+            <td style="border: 1px solid #ccc;padding: 5px;">ลำดับ</td>
+            <td style="border: 1px solid #ccc;padding: 5px;">รายการ</td>
+            <td style="border: 1px solid #ccc;padding: 5px;">ขนาด</td>
+            <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">จำนวน</td>
+            <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">ราคา</td> 
+          </tr>
+          <? } ?>
+          <tr>
+            <td style="border: 1px solid #ccc;padding: 5px;"></td>
+            <td style="border: 1px solid #ccc;padding: 5px;"></td>
+            <td style="border: 1px solid #ccc;padding: 5px;"></td>
+            <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">ราคารวม</td>
+            <td style="border: 1px solid #ccc;padding: 5px;text-align: right;">6,550</td> 
+          </tr>
+      </tbody>
+    </table>
+
+    <p style="font-size: 9pt;width: 200%;position: relative;left: -50%;bottom: -50px;">ลงชื่อ ........................................................................................................................ เจ้าหน้าที่ </p>
+
+  </div>
+</div>

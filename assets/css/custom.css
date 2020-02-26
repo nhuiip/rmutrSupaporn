@@ -1,0 +1,67 @@
+
+.error {
+    color: red !important;
+    font-size: 12px;
+}
+.detail {
+    margin-top: 15px;
+}
+.sidebar .menu .list a span {
+    margin: 0.5rem;
+    font-size: 12px;
+}
+.menu_sm .sidebar .menu .list a i{
+    display: unset;
+}
+.sidebar .menu .list a i{
+    display: none;
+}
+.sidebar .menu .list a {
+    color: #313740;
+    position: relative;
+    padding: 5px 10px;
+}
+.sidebar .menu .list .header {
+    margin-top: 15px;
+    color: red;
+}
+.sidebar {
+    width: 300px;
+}
+.sidebar .menu .list .ml-menu li a {
+    font-size: 12px;
+}
+section.content {
+    margin: 0 0 0 350px;
+}
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: right;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+.form-group .bootstrap-select.btn-group {
+    padding: 0;
+}
+.list-group-item.listform {
+    padding: .75rem 1.25rem 0;
+}
+.bootstrap-select .btn.btn-round.btn-simple .filter-option {
+    color: #616161;
+}
+.modal-backdrop {
+    z-index: 1 !important;
+}
+.swal2-popup {
+    padding: 2.25em !important;
+}
+
+table.dataTable>tbody>tr.child ul {
+    width: 100%;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before{
+    top: 24px !important;
+    /* display: none !important; */
+}
