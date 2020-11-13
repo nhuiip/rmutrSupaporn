@@ -61,7 +61,6 @@ function fncChange(e) {
     confirmButtonText: "Change",
     showLoaderOnConfirm: true
   }).then(result => {
-    // console.log(result);
     if (result.value) {
       $.ajax({
         type: "POST",

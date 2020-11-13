@@ -83,8 +83,8 @@ $db['default'] = array(
 	// Localhost ====================== //
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'rmutr_db',
+	'password' => '12345678',
+	'database' => 'project_supaporn',
 	// End =========================== //
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
